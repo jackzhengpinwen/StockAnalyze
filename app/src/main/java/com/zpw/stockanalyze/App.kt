@@ -21,6 +21,8 @@ class App: Application() {
         AssetsUtils.getAPIArgs("api_args.txt", this)
         // 读取token
         AssetsUtils.getToken("token.txt", this)
+        // 读取gdp
+        AssetsUtils.getGdp("gdp.txt", this)
         // 读取股票代码
         AssetsUtils.getData(this)
     }

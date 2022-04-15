@@ -80,6 +80,30 @@ public class AssetsUtils {
         }
     }
 
+    public static float GDP = 0f;
+
+    /**
+     * 获取gdp
+     * @param fileName
+     * @param context
+     * @return
+     */
+    public static void getGdp(String fileName, Context context) {
+        try {
+            //获取assets资源管理器
+            AssetManager assetManager = context.getAssets();
+            //通过管理器打开文件并读取
+            BufferedReader bf = new BufferedReader(new InputStreamReader(
+                    assetManager.open(fileName)));
+            String line;
+            while ((line = bf.readLine()) != null) {
+                GDP = Float.parseFloat(line);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     public static final Map<String, String> API_ARGS = new HashMap<>();
 
     /**

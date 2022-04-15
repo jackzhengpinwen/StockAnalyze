@@ -1,6 +1,7 @@
 package com.zpw.stockanalyze.mvvm.menu
 
 import android.content.Intent
+import com.zpw.stockanalyze.internal.network.StockValue
 import com.zpw.stockanalyze.mvvm.anchor.AnchorActivity
 import com.zpw.stockanalyze.mvvm.futures.FuturesActivity
 import com.zpw.stockanalyze.mvvm.industry.IndustryActivity
@@ -13,6 +14,7 @@ class MenuViewModel(
     private val executors: AppExecutors
 ): BaseViewModel<MenuRepository>(repo) {
     private val TAG: String = MenuViewModel::class.java.simpleName
+    val stockValue = mutableListOf<StockValue>()
 
     fun comeToSearch(activity: MenuActivity) {
         activity.startActivity(Intent(activity, SearchActivity::class.java))
@@ -30,5 +32,11 @@ class MenuViewModel(
         val intent = Intent(activity, IndustryActivity::class.java)
         intent.putExtra(IndustryActivity.ANALYZE, analyze)
         activity.startActivity(intent)
+    }
+
+    suspend fun getStockValue(): StockValue {
+        stockValue.addAll(repo.getStockValue())
+        val data = stockValue[stockValue.size - 1]
+        return data
     }
 }

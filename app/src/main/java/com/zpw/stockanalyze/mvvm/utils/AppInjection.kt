@@ -66,7 +66,7 @@ object AppInjection {
     }
 
     fun getMenuRepository(): MenuRepository {
-        return MenuRepository()
+        return MenuRepository(getNetHelper())
     }
 
     fun getAnchorRepository(): AnchorRepository {

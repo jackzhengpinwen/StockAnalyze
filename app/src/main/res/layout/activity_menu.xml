@@ -15,6 +15,15 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <TextView
+            android:id="@+id/overview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/search"
+            android:layout_centerInParent="true"
+            android:textColor="@color/backColor"
+            android:textSize="18sp"/>
+
         <Button
             android:id="@+id/search"
             android:layout_width="wrap_content"

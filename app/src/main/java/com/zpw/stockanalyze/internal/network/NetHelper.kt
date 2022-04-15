@@ -118,4 +118,26 @@ object NetHelper {
 
         return stock
     }
+
+    fun getStockValue(): StockValues {
+        val logging = HttpLoggingInterceptor {
+            if(App.openHttpLog) {
+                Timber.tag("OkHttp").d(it)
+            }
+        }
+        logging.setLevel(HttpLoggingInterceptor.Level.BODY)
+
+        val client = OkHttpClient.Builder()
+            .addInterceptor(logging)
+            .build()
+
+        val stockValue = Retrofit.Builder()
+            .baseUrl("http://api.waizaowang.com")
+            .client(client)
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+            .create(StockValues::class.java)
+
+        return stockValue
+    }
 }
