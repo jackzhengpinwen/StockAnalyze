@@ -1,0 +1,2 @@
+stockDailyQuotes=code,name,tdate,price,zdfd,dsyl,sjlv,ltsz,jrkpj,zrspj,zgj,zdj
+futureDailyQuotes=jyscode,jysname,pzcode,code,name,tdate,zxj,zdf,zg,zd
