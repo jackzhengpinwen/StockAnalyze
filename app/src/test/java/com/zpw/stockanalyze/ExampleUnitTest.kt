@@ -1,6 +1,8 @@
-package com.zpw.stockanalyze
+package com.zpw.shadowbuilder
 
 import org.junit.Test
+
+import org.junit.Assert.*
 
 /**
  * Example local unit test, which will execute on the development machine (host).
@@ -8,157 +10,34 @@ import org.junit.Test
  * See [testing documentation](http://d.android.com/tools/testing).
  */
 class ExampleUnitTest {
-    val string = "600519.SH\n" +
-            "300750.SZ\n" +
-            "600036.SH\n" +
-            "601318.SH\n" +
-            "601166.SH\n" +
-            "601012.SH\n" +
-            "000858.SZ\n" +
-            "000333.SZ\n" +
-            "300059.SZ\n" +
-            "603259.SH\n" +
-            "600900.SH\n" +
-            "600887.SH\n" +
-            "002594.SZ\n" +
-            "600030.SH\n" +
-            "601288.SH\n" +
-            "601899.SH\n" +
-            "601398.SH\n" +
-            "002415.SZ\n" +
-            "601888.SH\n" +
-            "600276.SH\n" +
-            "000651.SZ\n" +
-            "002475.SZ\n" +
-            "601319.SH\n" +
-            "000568.SZ\n" +
-            "002714.SZ\n" +
-            "000725.SZ\n" +
-            "601328.SH\n" +
-            "000001.SZ\n" +
-            "300760.SZ\n" +
-            "002142.SZ\n" +
-            "600048.SH\n" +
-            "000002.SZ\n" +
-            "600309.SH\n" +
-            "600000.SH\n" +
-            "601816.SH\n" +
-            "600438.SH\n" +
-            "600016.SH\n" +
-            "002812.SZ\n" +
-            "603501.SH\n" +
-            "300274.SZ\n" +
-            "300014.SZ\n" +
-            "600031.SH\n" +
-            "300498.SZ\n" +
-            "000792.SZ\n" +
-            "002460.SZ\n" +
-            "300122.SZ\n" +
-            "600809.SH\n" +
-            "600111.SH\n" +
-            "603288.SH\n" +
-            "002129.SZ\n" +
-            "601668.SH\n" +
-            "603799.SH\n" +
-            "300124.SZ\n" +
-            "600837.SH\n" +
-            "601919.SH\n" +
-            "002241.SZ\n" +
-            "002049.SZ\n" +
-            "002466.SZ\n" +
-            "600436.SH\n" +
-            "002709.SZ\n" +
-            "601857.SH\n" +
-            "600690.SH\n" +
-            "002271.SZ\n" +
-            "002352.SZ\n" +
-            "600585.SH\n" +
-            "603986.SH\n" +
-            "601601.SH\n" +
-            "002230.SZ\n" +
-            "300142.SZ\n" +
-            "601688.SH\n" +
-            "688981.SH\n" +
-            "601088.SH\n" +
-            "002304.SZ\n" +
-            "600919.SH\n" +
-            "600406.SH\n" +
-            "000063.SZ\n" +
-            "300015.SZ\n" +
-            "000338.SZ\n" +
-            "601169.SH\n" +
-            "601211.SH\n" +
-            "601988.SH\n" +
-            "600104.SH\n" +
-            "002371.SZ\n" +
-            "600089.SH\n" +
-            "601985.SH\n" +
-            "600893.SH\n" +
-            "000100.SZ\n" +
-            "600383.SH\n" +
-            "002027.SZ\n" +
-            "600196.SH\n" +
-            "601229.SH\n" +
-            "600745.SH\n" +
-            "600703.SH\n" +
-            "600019.SH\n" +
-            "600050.SH\n" +
-            "601658.SH\n" +
-            "600028.SH\n" +
-            "688599.SH\n" +
-            "601939.SH\n" +
-            "600570.SH\n" +
-            "601390.SH\n" +
-            "601225.SH\n" +
-            "600905.SH\n" +
-            "300347.SZ\n" +
-            "601818.SH\n" +
-            "002821.SZ\n" +
-            "601766.SH\n" +
-            "002459.SZ\n" +
-            "600660.SH\n" +
-            "601009.SH\n" +
-            "600346.SH"
+    val something = "            <p>今天股票市场大跌，风格分化。</p><p>上证50指数下跌2.85%，沪深300指数下跌3.06%，创业板指下跌3.56%，创业板综下跌3.27%，万得全a下跌2.81%，小市值指数下跌2.71%，茅指数下跌3.77%。 </p><p>今天<em style=\"color: rgb(204, 0, 0);\">万得全a下跌2.81%</em>至5062.点，距离2021年下半年震荡中枢的5777相差-12.38%，距离震荡区间上边缘的6029点相差16.04%。 </p><p>中央经济工作会议以来，上证50指数下跌14.96%，沪深300指数下跌17.42%，创业板指下跌25.86%，创业板综下跌20.76%，万得全a指数下跌15.16%，小市值指数下跌5.14%，茅指数下跌24.06%。 </p><p>上证50指数累计跑赢万得全a指数0.20%，小市值指数累计跑赢万得全a指数10.02%，创业板指累积跑输万得全a指数10.69%，茅指数累积跑输万得全a指数8.89%。 </p><p>今日沪深两市<em style=\"color: rgb(204, 0, 0);\">成交9543.44亿元</em>，前一交易日成交10676.45亿元，<em style=\"color: rgb(204, 0, 0);\">缩量1133.01亿元</em>。小市值板块成交3201.52亿元，前一交易日成交3351.8亿元，缩量150.27亿元。 </p><p>今天市场缩量大幅下跌，成交量缩减到了9500亿附近，<em style=\"color: rgb(204, 0, 0);\">反馈了很强的负债压力</em>。</p><p><img src=\"https://article-images.zsxq.com/FuUWG4xuiyX7hY1Pun6y3ex-WPQw\"></p><p>今日小市值板块成交额占沪深两市成交额的比例为33.5%，前一交易日占比为31.4%，增加2.15%。 </p><p>风格方面，上证50指数跑赢创业板指，价值与成长之间，市场风格偏价值。小市值指数跑赢沪深300指数，白马与小票之间，市场风格偏小票。</p><p> 凹性方面，茅指数输万得全a指数0.96%，凹性为负贡献。今天凹性的作用始终为负，始终在拖累指数。目前，市场处于流动性陷阱阶段，带清仓线的私募十分谨慎，<em style=\"color: rgb(204, 0, 0);\">少数愿意下场的投资者还是倾向于阿尔法，看淡贝塔（也有可能是因为外资主要砸的是大票）</em>。</p><p><img src=\"https://article-images.zsxq.com/Fm2PIPOwj66oFF7l72nu9WvR9YPW\"></p><p>关于流动性陷阱的问题，我们在之前的复盘和公众号文章中，已经讲过了。今天乘数因子x表现得很差，加上资金是流出的（看全a），<em style=\"color: rgb(204, 0, 0);\">整个链条是反向运动的，有更多的账户进入满仓现金的待机状态</em>。</p><p>解决问题的立竿见影的办法，我们已经讨论过了，<em style=\"color: rgb(204, 0, 0);\">引导市场系统性地降低清仓线</em>。这还是有一定的难度的。</p><p><img src=\"https://article-images.zsxq.com/Fk8oacHX1bclNhWIUt_y09O2IgLg\"></p><p><br></p><p>基本方面，今天市场交易的主体还是疫情，只不过市场还是按照就近交易的，交易的框架为“<em style=\"color: rgb(204, 0, 0);\">清零+严控</em>”，所以，跌得最惨的是消费、旅游、航运等板块。</p><p><img src=\"https://article-images.zsxq.com/FmaUiYpmIBF4Bd61P-QLg7KUwh4g\"></p><p><img src=\"https://article-images.zsxq.com/FkTX8vcEZgzfq_fpOGQl0fOgdVD6\"></p><p>表面上看，今天市场大跌的原因在于资产端——大面积疫情，看起来5.5%毫无希望。</p><p>但实际上，并非如此。<em style=\"color: rgb(204, 0, 0);\">主要力量还是来自于负债端</em>，有两块：一块是内部负债脆弱的原因，另一块是外资流出的原因。</p><p>今天北上资金大幅流出144亿+，恒生综指跌5.8%，恒生科技跌11%+。</p><p>港股大跌，北上大幅流出以及全a大幅杀跌近3%，这三者是关联在一起的。</p><p>他们之间的关联性并不是来自于国内疫情加重，而是，其他因素。</p><p>在这里有一个比较靠谱的解释，我引用一下：</p><blockquote><em style=\"color: rgb(204, 0, 0);\">中午特意和香港不少朋友同学深聊了下。才发现港股这波 包括A股 真的和 俄罗斯有关。</em></blockquote><blockquote><em style=\"color: rgb(204, 0, 0);\">MSCI 包括 富时指数等等，国际指数。其中有一块叫做 新兴市场指数。这个指数因为俄罗斯股市不开，同时反制裁，冻结了所有外资财产（欧美制裁冻结了俄国3000亿美债 俄国反向冻结了其资本市场外资持仓。）</em></blockquote><blockquote><em style=\"color: rgb(204, 0, 0);\">这里导致了 新兴市场指数跟踪的国际资金，出现了2700亿的风险敞口，流动性缺口。</em></blockquote><blockquote><em style=\"color: rgb(204, 0, 0);\">为了应对资金赎回 和 流动性需求。新兴市场指数里 流动性最好的就是港股和A股。所以外资近期已经砸了800亿的港股，和 400亿的A股。其他新兴市场一样被砸。</em></blockquote><p>也就是说，俄国和西方相互制裁的行为导致一些全球基金出现了大量的流动性缺口，这些基金只能砸港股和a股来补充流动性以兑付赎回压力。</p><p>所以，根子在这些新兴市场基金的流动性缺口，他们抽流动性把港股抽得很惨，也让a股雪上加霜。</p><p>如果a股没有遭遇流动性陷阱的问题，尚且不会在意几百亿的净流出，但是，<em style=\"color: rgb(204, 0, 0);\">现在a股的自身的流动性也很脆弱</em>。</p><p><img src=\"https://article-images.zsxq.com/FnaFZ3ix_cR6ck1knlFl_rUkmBQN\"></p><p><img src=\"https://article-images.zsxq.com/FhWrApEF0xR10BcOpf8EMZO-tTAk\"></p><p><img src=\"https://article-images.zsxq.com/FvFltUU7b4tCx19OfXQRWBuHNFc9\"></p><p>分板块来看，今天没有上涨的板块。</p><p><img src=\"https://article-images.zsxq.com/FsIZin10069mORn94uJbaf8_Qafv\"></p><p><em style=\"color: rgb(204, 0, 0);\">今天跌幅大于1%的板块有29个</em>，分别是：消费者服务、农林牧渔、食品饮料、交通运输、有色金属、煤炭、电力设备及新能源、电子、家电、电力及公用事业、钢铁、传媒、计算机、建材、通信、机械、综合金融、综合、汽车、纺织服装、轻工制造、银行、基础化工、建筑、石油石化、商贸零售、房地产、非银行金融、医药。</p><p>除了一个军工板块，其他所有板块均跌幅超过1%，算一次大型普跌行情。</p><p><img src=\"https://article-images.zsxq.com/FsDOSLyG0cpyXx2IQpn7fPqJW2-n\"></p><p>中央经济工作会议以来（<span style=\"color: rgb(204, 0, 0);\">2021年12月10日</span>），市场大幅切换风格，遭遇了凹性所带来的市值冲击，并触发了市场的脆弱性——<em style=\"color: rgb(204, 0, 0);\">流动性陷阱</em>，中间叠加了一系列事件，具体分布如下：</p><p><br></p><p>阶段一：凹性+流动性主导</p><p>1、资金利率意外攀升挤压高景气高估值板块（高低切）；</p><p>2、新能源产业链的博弈（新老切）；</p><p>3、一开年市场遭遇了巨大的调仓需求，市场承担了巨大的流动性压力；</p><p>4、fomc会议纪要放鹰（高低切）；</p><p>5、放松三条红线，鼓励优质地产公司兼并（新老切；大小切）；</p><p>6、传言2022年专项债额度与2021年持平（预期过于丰满）；</p><p>7、央行omo降息，缓解高估值股票的压力（1-17）；</p><p>8、周四5年lpr降息的预期（1-18）；</p><p>9、fed首次加息的预期幅度从25bp升至50bp（1-19）；</p><p>10、5年lpr降息5bp（1-20）；</p><p>11、场内流动性L挂了（1-21）；</p><p>12、海外恐慌情绪+议息会议压制激发客户情绪（1-25）；</p><p>13、鲍威尔在1月fomc发布会放鹰，外资大量流出（1-27）；</p><p>14、北上资金继续大幅调仓，净卖出120亿+（1-28）</p><p><br></p><p>阶段二：流动性主导</p><p>15、1月社融大幅超预期（2-11）</p><p>16、转债大跌，二级债基赎回压力（2-14）</p><p>17、市场确认进入了流动性主导的阶段（2-15）</p><p>18、菏泽出地产政策，起到信号作用（2-18）</p><p>19、四大行调低广州房贷利率加点20bp（2-21）</p><p>20、俄乌地缘政治风险，债券下跌和港股科技股下跌带来负债冲击（2-22）</p><p>21、抄底资金涌入老景气板块，两市成交量重新破万亿，深圳，杭州跟进调低房贷利率（2-23）</p><p>22、俄罗斯入侵乌克兰（2-24）</p><p>23、欧美金融制裁俄罗斯（2-27）</p><p>24、郭主席讲话（3-2）</p><p>25、二级债基的赎回压力（3-4）</p><p>26、5.5%的GDP目标打出加息效果（3-7）</p><p>27、脆弱负债引发大跌（3-8）</p><p>28、刚性合同摩擦，引发流动性短缺（3-9）</p><p>29、<em style=\"color: rgb(204, 0, 0);\">疫情加剧，俄乌事件的制裁措施导致新兴市场基金大幅卖出港股和a股回笼流动性</em>（3-14）</p><p><br></p><p>经过两个多月的杀跌，很多带清仓线的账户进入了待机状态，锁死了大量的流动性，市场陷入了流动性陷阱。</p><p>上周末疫情加剧，压制了市场的风险偏好，新兴市场基金大幅卖出港股和a股回收流动性，进一步恶化了市场的流动性情况，a股市场的脆弱的负债再次被激发，市场普跌。</p><p><img src=\"https://article-images.zsxq.com/Fo2vhsnDCPMzgFJtop96_yf1E9dK\"></p><p>今天成交量缩量，缩量至9500亿。未来我们所希望看到的情况是：</p><p>1、港股企稳——代表外资流动性压力减轻；</p><p>2、茅指数企稳——靠自下而上的景气；</p><p>3、小市值指数企稳——靠流动性；</p><p>4、成交量继续维持在10000亿之上，至少要保持在9500亿+的水平。</p><p><br></p><p><strong style=\"color: rgb(204, 0, 0);\">总量方面风险偏好回落，万得全a跌15.16%。</strong></p><p><br></p><p>结构方面，累积涨幅大于-1%的板块有2个，分别是：煤炭、建筑。</p><p><br></p><p>目前，未来确定性比较强的方向包括以下四个方向：1、地产产业链；2、新老基建；3、大流行结束预期（香港、上海疫情形成短期拖累）；4、大宗涨价方向（自下而上视角）；</p><p><br></p><p>累积跌幅大于4%的板块有28个，分别是：农林牧渔、电力及公用事业、交通运输、综合、房地产、纺织服装、银行、石油石化、钢铁、综合金融、商贸零售、轻工制造、通信、建材、传媒、基础化工、医药、有色金属、非银行金融、消费者服务、计算机、国防军工、电力设备及新能源、家电、机械、食品饮料、电子、汽车。</p><p><br></p><p>以上就是58个交易日以来的总量+结构。市场根据增量讯息给出了十分明确的未来方向——稳经济。虽然主线逻辑推进的过程困难重重，但是，堵点正在逐渐排除。</p><p><br></p><p>然而，现在市场最突出的问题是<em style=\"color: rgb(204, 0, 0);\">脆弱负债的问题</em>，未来等待解决的问题是流动性的充分释放。</p><p><img src=\"https://article-images.zsxq.com/FrFURa2y85RB5vW2xWNvLEWTENBZ\"></p><p>当下，我们需要的是耐心的等待，等待负面凹性效应的消除（<em style=\"color: rgb(204, 0, 0);\">看茅指数，消除需要更多的大市值股票的自下而上的景气</em>），等待流动性陷阱的结束（<em style=\"color: rgb(204, 0, 0);\">主要观察小市值指数</em>）；等待更多的经济政策落地；等待经济数据有实质性的好转；等待风险事件影响结束。</p><p>市场进展到下一阶段的一个重要确认点是：是一次较大幅度+较大成交量的上涨（<em style=\"color: rgb(204, 0, 0);\">全a涨幅超过2%+成交量重新过万亿</em>）。</p><p><img src=\"https://article-images.zsxq.com/FoQwd-AGTt3xyX29myh6epryYg-Y\"></p><p>未来关注的点，</p><p><strong>1、万得全a的变动情况；</strong></p><p><strong>2、场内流动性总量情况——流动性陷阱，注意成交量，注意小市值指数的变动；</strong></p><p><strong>3、场内流动性分布情况——凹性影响，茅指数的变动情况，外资赎回也会砸茅指数；</strong></p><p><strong>4、二月的社融情况，大幅低于预期，</strong><strong style=\"color: rgb(204, 0, 0);\">激发了二次降息的预期</strong><strong>；</strong></p><p><strong>5、经济情况，2月的pmi未能改变b+0的预期，这个会影响凹性；</strong></p><p><strong>6、北上资金情况，</strong><strong style=\"color: rgb(204, 0, 0);\">今天大幅净流出</strong><strong>；</strong></p><p><strong>7、疫情和防疫政策的变化；</strong></p><p>8、信贷政策，尤其是<strong>房地产政策变化，降低贷款利率、降低首付比率和放松限购</strong>；</p><p>9、政府债净融资情况；</p><p><strong>10、美国的就业数据；</strong></p><p><strong>11</strong>、疫情演化，上海和香港疫情；</p><p>附注，上一次外资猛砸权重板块是1月28日，那天净流出金额也在144亿+的量级。</p><p><img src=\"https://article-images.zsxq.com/FgfU-71P6nr-asfcYcX-2kS2nSHY\"></p>\n"
     @Test
-    fun addition_isCorrect() {
-        val str = string.replace(".SH", "").replace(".SZ", "")
-        println(str)
-    }
-
-    @Test
-    fun reverseStr() {
-        val  s = "abcd"
-        val k = 2
-        val n = s.length
-        val ss = s.toCharArray()
-        var right = 0
-        while (right < n) {
-            if ((right + 1) % (2 * k) == 0) {
-                // 反转这 2k 字符中的前 k 个字符
-                reverse(ss, right + 1 - 2 * k, right + 1 - k - 1)
-            } else if (right + 1 > n - k) {
-                // 剩余字符全部反转
-                reverse(ss, right, n - 1)
-                break
-            } else if (right > n - 2 * k && right < n - k) {
-                // 反转前 k 个字符
-                reverse(ss, right, right + k - 1)
-                break
-            }
-            right++
-        }
-        println(String(ss))
-    }
-
-    fun reverse(arr: CharArray, left: Int, right: Int) {
-        var left = left
-        var right = right
-        while (left < right) {
-            val temp = arr[left]
-            arr[left] = arr[right]
-            arr[right] = temp
-            left++
-            right--
-        }
+    fun replaceSomething() {
+        println(something
+            .replace(" ", "")
+            .replace("<p>", "")
+            .replace("</p>", "\n")
+            .replace("<br>", "")
+            .replace("<spanstyle=\"color:rgb(204,0,0);\">", "")
+            .replace("<spanstyle=\"color:rgb(38,38,38);\">", "")
+            .replace("</span>", "")
+            .replace("<strongstyle=\"color:rgb(204,0,0);\">", "")
+            .replace("<strongstyle=\"color:rgb(204,0,0);font-size:15px;\">", "")
+            .replace("<strongstyle=\"font-size:15px;color:rgb(204,0,0);\">", "")
+            .replace("<strong>", "")
+            .replace("</strong>", "")
+            .replace("<blockquote>", "")
+            .replace("</blockquote>", "")
+            .replace("<em>", "")
+            .replace("</em>", "")
+            .replace("<emstyle=\"font-size:15px;color:rgb(204,0,0);\">", "")
+            .replace("<emstyle=\"color:rgb(204,0,0);font-size:15px;\">", "")
+            .replace("<emstyle=\"font-size:14px;color:rgb(204,0,0);\">", "")
+            .replace("<emstyle=\"color:rgb(69,128,0);font-size:15px;\">", "")
+            .replace("<emstyle=\"color:rgb(69,128,0);\">", "")
+            .replace("<emstyle=\"color:rgb(204,0,0);\">", "")
+            .replace("<emstyle=\"color:rgb(236,40,52);\">", "")
+            .replace("<strongstyle=\"background-color:white;color:rgb(204,0,0);\">", "")
+        )
     }
 }
