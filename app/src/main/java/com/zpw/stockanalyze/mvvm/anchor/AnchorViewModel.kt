@@ -4,12 +4,10 @@ import android.content.Intent
 import com.zpw.stockanalyze.internal.network.DailyQuote
 import com.zpw.stockanalyze.internal.utils.AssetsUtils
 import com.zpw.stockanalyze.mvvm.dailyquotes.DailyQuotesActivity
-import com.zpw.stockanalyze.mvvm.utils.AppExecutors
 import com.zpw.stockanalyze.mvvm.viewmodel.BaseViewModel
 
 class LineDataViewModel(
-    private val repo: AnchorRepository,
-    private val executors: AppExecutors
+    private val repo: AnchorRepository
 ) : BaseViewModel<AnchorRepository>(repo) {
     private val TAG: String = LineDataViewModel::class.java.simpleName
 

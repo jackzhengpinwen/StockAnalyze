@@ -3,12 +3,10 @@ package com.zpw.stockanalyze.mvvm.industry
 import com.zpw.stockanalyze.internal.network.DailyQuote
 import com.zpw.stockanalyze.internal.network.Industry
 import com.zpw.stockanalyze.internal.network.IndustryDetail
-import com.zpw.stockanalyze.mvvm.utils.AppExecutors
 import com.zpw.stockanalyze.mvvm.viewmodel.BaseViewModel
 
 class IndustryViewModel(
-    private val repo: IndustryRepository,
-    private val executors: AppExecutors
+    private val repo: IndustryRepository
 ) : BaseViewModel<IndustryRepository>(repo) {
     private val TAG: String = IndustryViewModel::class.java.simpleName
     var industryData: List<Industry> = emptyList()

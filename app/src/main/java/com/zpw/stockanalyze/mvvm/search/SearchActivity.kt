@@ -3,20 +3,17 @@ package com.zpw.stockanalyze.mvvm.search
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.inputmethod.InputMethodManager
-import android.widget.Toast
-import androidx.core.widget.addTextChangedListener
 import androidx.lifecycle.lifecycleScope
 import com.shencoder.loadingdialog.LoadingDialog
 import com.zpw.stockanalyze.R
 import com.zpw.stockanalyze.databinding.ActivitySearchBinding
 import com.zpw.stockanalyze.mvvm.search.editlibrary.BSearchEdit
 import com.zpw.stockanalyze.mvvm.search.searchview.SearchView
-import com.zpw.stockanalyze.mvvm.utils.AppInjection
+import com.zpw.stockanalyze.mvvm.utils.AppViewModelFactory
 import com.zpw.stockanalyze.mvvm.view.BaseMvvmActivity
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
-import timber.log.Timber
 
 
 class SearchActivity: BaseMvvmActivity<SearchViewModel, ActivitySearchBinding>() {
@@ -62,7 +59,7 @@ class SearchActivity: BaseMvvmActivity<SearchViewModel, ActivitySearchBinding>()
         bSearchEdit.build()
     }
 
-    override fun getViewModelOrFactory(): Any = AppInjection.getSearchViewModelFactory()
+    override fun getViewModelOrFactory(): Any = AppViewModelFactory(SearchRepository())
 
     override fun initObservable(viewModel: SearchViewModel) {
 

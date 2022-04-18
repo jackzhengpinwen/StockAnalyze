@@ -3,10 +3,11 @@ package com.zpw.stockanalyze
 import android.app.Application
 import com.zpw.stockanalyze.internal.utils.AppGlobal
 import com.zpw.stockanalyze.internal.utils.AssetsUtils
+import dagger.hilt.android.HiltAndroidApp
 import timber.log.Timber
 import timber.log.Timber.*
 
-
+@HiltAndroidApp
 class App: Application() {
     companion object {
         val openHttpLog = true

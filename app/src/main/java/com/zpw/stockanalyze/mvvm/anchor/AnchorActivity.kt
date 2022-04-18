@@ -10,13 +10,12 @@ import cn.jingzhuan.lib.chart.widget.LineChart
 import com.shencoder.loadingdialog.LoadingDialog
 import com.zpw.stockanalyze.R
 import com.zpw.stockanalyze.databinding.ActivityAnchorChartBinding
-import com.zpw.stockanalyze.mvvm.utils.AppInjection
+import com.zpw.stockanalyze.mvvm.utils.AppViewModelFactory
 import com.zpw.stockanalyze.mvvm.view.BaseMvvmActivity
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
 import timber.log.Timber
-import java.text.DecimalFormat
 import java.util.concurrent.CountDownLatch
 
 class AnchorActivity: BaseMvvmActivity<LineDataViewModel, ActivityAnchorChartBinding>() {
@@ -40,7 +39,7 @@ class AnchorActivity: BaseMvvmActivity<LineDataViewModel, ActivityAnchorChartBin
         }
     }
 
-    override fun getViewModelOrFactory(): Any = AppInjection.getAnchorViewModelFactory()
+    override fun getViewModelOrFactory(): Any = AppViewModelFactory(AnchorRepository())
 
     override fun initObservable(viewModel: LineDataViewModel) {
 

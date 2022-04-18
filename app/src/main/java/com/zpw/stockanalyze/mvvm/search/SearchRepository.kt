@@ -7,7 +7,7 @@ import com.zpw.stockanalyze.internal.utils.AssetsUtils
 import com.zpw.stockanalyze.mvvm.model.BaseRepository
 import com.zpw.stockanalyze.mvvm.performance.PerformanceRepository
 
-class SearchRepository(val netHelper: NetHelper): BaseRepository() {
+class SearchRepository: BaseRepository() {
     private val TAG: String = PerformanceRepository::class.java.simpleName
 
     suspend fun getStock(): List<Stock> {

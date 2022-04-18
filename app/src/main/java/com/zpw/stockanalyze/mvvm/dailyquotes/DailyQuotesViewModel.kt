@@ -1,12 +1,10 @@
 package com.zpw.stockanalyze.mvvm.dailyquotes
 
 import com.zpw.stockanalyze.internal.network.DailyQuote
-import com.zpw.stockanalyze.mvvm.utils.AppExecutors
 import com.zpw.stockanalyze.mvvm.viewmodel.BaseViewModel
 
 class DailyQuotesViewModel(
-    private val repo: DailyQuotesRepository,
-    private val executors: AppExecutors
+    private val repo: DailyQuotesRepository
     ): BaseViewModel<DailyQuotesRepository>(repo) {
     private val TAG: String = DailyQuotesViewModel::class.java.simpleName
 

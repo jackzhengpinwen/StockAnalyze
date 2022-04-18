@@ -8,7 +8,7 @@ import com.zpw.stockanalyze.internal.utils.AssetsUtils
 import com.zpw.stockanalyze.mvvm.model.BaseRepository
 import com.zpw.stockanalyze.mvvm.utils.DateUtils
 
-class DailyQuotesRepository(val netHelper: NetHelper): BaseRepository() {
+class DailyQuotesRepository: BaseRepository() {
     private val TAG: String = DailyQuotesRepository::class.java.simpleName
 
     suspend fun getDailyQuotes(dataType: String): List<DailyQuote> {

@@ -10,7 +10,7 @@ import com.zpw.stockanalyze.internal.network.CW
 import com.zpw.stockanalyze.mvvm.dailyquotes.view.CustomizeScrollView
 import com.zpw.stockanalyze.mvvm.performance.adapter.StockAdapter
 import com.zpw.stockanalyze.mvvm.performance.adapter.TabAdapter
-import com.zpw.stockanalyze.mvvm.utils.AppInjection
+import com.zpw.stockanalyze.mvvm.utils.AppViewModelFactory
 import com.zpw.stockanalyze.mvvm.view.BaseMvvmActivity
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
@@ -130,7 +130,7 @@ class PerformanceActivity: BaseMvvmActivity<PerformanceViewModel, ActivityPerfor
         })
     }
 
-    override fun getViewModelOrFactory(): Any = AppInjection.getPerformanceViewModelFactory()
+    override fun getViewModelOrFactory(): Any = AppViewModelFactory(PerformanceRepository())
 
     override fun initObservable(viewModel: PerformanceViewModel) {
 

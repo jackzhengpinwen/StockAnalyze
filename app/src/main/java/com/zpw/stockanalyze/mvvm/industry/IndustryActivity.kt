@@ -11,12 +11,11 @@ import com.zpw.stockanalyze.internal.network.IndustryDetail
 import com.zpw.stockanalyze.mvvm.dailyquotes.view.CustomizeScrollView
 import com.zpw.stockanalyze.mvvm.industry.adapter.StockAdapter
 import com.zpw.stockanalyze.mvvm.industry.adapter.TabAdapter
-import com.zpw.stockanalyze.mvvm.utils.AppInjection
+import com.zpw.stockanalyze.mvvm.utils.AppViewModelFactory
 import com.zpw.stockanalyze.mvvm.view.BaseMvvmActivity
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
-import okhttp3.internal.wait
 import timber.log.Timber
 import java.util.*
 import java.util.concurrent.CountDownLatch
@@ -129,7 +128,7 @@ class IndustryActivity : BaseMvvmActivity<IndustryViewModel, ActivityIndustryBin
         })
     }
 
-    override fun getViewModelOrFactory(): Any = AppInjection.getIndustryViewModelFactory()
+    override fun getViewModelOrFactory(): Any = AppViewModelFactory(IndustryRepository())
 
     override fun initObservable(viewModel: IndustryViewModel) {
 

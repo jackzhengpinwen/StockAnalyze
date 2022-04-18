@@ -7,11 +7,10 @@ import com.shencoder.loadingdialog.LoadingDialog
 import com.zpw.stockanalyze.R
 import com.zpw.stockanalyze.databinding.ActivityDailyquotesBinding
 import com.zpw.stockanalyze.internal.network.DailyQuote
-import com.zpw.stockanalyze.internal.utils.AssetsUtils
 import com.zpw.stockanalyze.mvvm.dailyquotes.adapter.StockAdapter
 import com.zpw.stockanalyze.mvvm.dailyquotes.adapter.TabAdapter
 import com.zpw.stockanalyze.mvvm.dailyquotes.view.CustomizeScrollView
-import com.zpw.stockanalyze.mvvm.utils.AppInjection
+import com.zpw.stockanalyze.mvvm.utils.AppViewModelFactory
 import com.zpw.stockanalyze.mvvm.view.BaseMvvmActivity
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
@@ -141,7 +140,7 @@ class DailyQuotesActivity: BaseMvvmActivity<DailyQuotesViewModel, ActivityDailyq
         })
     }
 
-    override fun getViewModelOrFactory(): Any = AppInjection.getDailyQuotesViewModelFactory()
+    override fun getViewModelOrFactory(): Any = AppViewModelFactory(DailyQuotesRepository())
 
     override fun initObservable(viewModel: DailyQuotesViewModel) {
 

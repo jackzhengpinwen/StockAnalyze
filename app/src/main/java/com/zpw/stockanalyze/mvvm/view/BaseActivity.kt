@@ -35,14 +35,6 @@ abstract class BaseActivity: AppCompatActivity() {
         }
     }
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        Timber.d(
-            TAG, "[onActivityResult] requestCode:" + requestCode + ";"
-                    + "resultCode:" + requestCode
-        )
-    }
-
     override fun onResume() {
         super.onResume()
         Timber.d(TAG, "[onResume]")

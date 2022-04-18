@@ -7,7 +7,7 @@ import com.zpw.stockanalyze.internal.utils.AssetsUtils
 import com.zpw.stockanalyze.mvvm.model.BaseRepository
 import com.zpw.stockanalyze.mvvm.performance.PerformanceRepository
 
-class MenuRepository(val netHelper: NetHelper): BaseRepository() {
+class MenuRepository: BaseRepository() {
     private val TAG: String = MenuRepository::class.java.simpleName
 
     suspend fun getStockValue(): List<StockValue> {

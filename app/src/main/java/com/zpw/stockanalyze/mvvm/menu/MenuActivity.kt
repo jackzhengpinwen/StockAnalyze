@@ -6,7 +6,7 @@ import com.shencoder.loadingdialog.LoadingDialog
 import com.zpw.stockanalyze.R
 import com.zpw.stockanalyze.databinding.ActivityMenuBinding
 import com.zpw.stockanalyze.internal.utils.AssetsUtils
-import com.zpw.stockanalyze.mvvm.utils.AppInjection
+import com.zpw.stockanalyze.mvvm.utils.AppViewModelFactory
 import com.zpw.stockanalyze.mvvm.view.BaseMvvmActivity
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
@@ -37,7 +37,7 @@ class MenuActivity: BaseMvvmActivity<MenuViewModel, ActivityMenuBinding>() {
         }
     }
 
-    override fun getViewModelOrFactory(): Any = AppInjection.getMenuViewModelFactory()
+    override fun getViewModelOrFactory(): Any = AppViewModelFactory(MenuRepository())
 
     override fun initObservable(viewModel: MenuViewModel) {
 

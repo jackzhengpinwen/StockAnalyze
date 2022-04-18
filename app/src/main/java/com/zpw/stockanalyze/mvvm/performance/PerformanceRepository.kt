@@ -7,7 +7,7 @@ import com.zpw.stockanalyze.internal.utils.AssetsUtils
 import com.zpw.stockanalyze.mvvm.model.BaseRepository
 import com.zpw.stockanalyze.mvvm.utils.DateUtils
 
-class PerformanceRepository(val netHelper: NetHelper): BaseRepository() {
+class PerformanceRepository: BaseRepository() {
     private val TAG: String = PerformanceRepository::class.java.simpleName
 
     suspend fun getCWDetail(code: String): List<CW> {

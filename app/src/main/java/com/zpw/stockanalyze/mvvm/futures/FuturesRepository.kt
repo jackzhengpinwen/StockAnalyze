@@ -8,7 +8,7 @@ import com.zpw.stockanalyze.internal.utils.AssetsUtils
 import com.zpw.stockanalyze.mvvm.model.BaseRepository
 import com.zpw.stockanalyze.mvvm.utils.DateUtils
 
-class FuturesRepository(val netHelper: NetHelper): BaseRepository() {
+class FuturesRepository: BaseRepository() {
 
     suspend fun getValueData(futureType: String): List<Future> {
         return netHelper.getFutures().getFutures(

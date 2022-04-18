@@ -37,8 +37,7 @@ abstract class BaseMvvmActivity<Vm: BaseViewModel<*>, V: ViewDataBinding>: BaseB
         if (`object` is ViewModel) {
             viewModel = `object` as Vm
         } else if (`object` is ViewModelProvider.Factory) {
-            viewModel =
-                ViewModelProvider(this, `object`)[modelClass]
+            viewModel = ViewModelProvider(this, `object`)[modelClass]
         } else {
             viewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory())[modelClass]
         }

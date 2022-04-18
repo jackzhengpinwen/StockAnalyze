@@ -6,7 +6,7 @@ import com.zpw.stockanalyze.internal.utils.AssetsUtils
 import com.zpw.stockanalyze.mvvm.model.BaseRepository
 import com.zpw.stockanalyze.mvvm.utils.DateUtils
 
-class AnchorRepository(val netHelper: NetHelper): BaseRepository() {
+class AnchorRepository: BaseRepository() {
 
     suspend fun getValueData(anchorType: String): List<DailyQuote> {
         return netHelper.getDailyQuotes().getDailyQuotes(

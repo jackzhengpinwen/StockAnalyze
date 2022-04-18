@@ -9,7 +9,7 @@ import cn.jingzhuan.lib.chart.widget.LineChart
 import com.shencoder.loadingdialog.LoadingDialog
 import com.zpw.stockanalyze.R
 import com.zpw.stockanalyze.databinding.ActivityFuturesChartBinding
-import com.zpw.stockanalyze.mvvm.utils.AppInjection
+import com.zpw.stockanalyze.mvvm.utils.AppViewModelFactory
 import com.zpw.stockanalyze.mvvm.view.BaseMvvmActivity
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
@@ -28,7 +28,7 @@ class FuturesActivity: BaseMvvmActivity<FuturesViewModel, ActivityFuturesChartBi
         lineChart.setDoubleTapToZoom(true)
     }
 
-    override fun getViewModelOrFactory(): Any = AppInjection.getFuturesViewModelFactory()
+    override fun getViewModelOrFactory(): Any = AppViewModelFactory(FuturesRepository())
 
     override fun initObservable(viewModel: FuturesViewModel) {
 

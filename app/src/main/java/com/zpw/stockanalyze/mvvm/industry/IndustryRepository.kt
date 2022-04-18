@@ -5,7 +5,7 @@ import com.zpw.stockanalyze.internal.utils.AssetsUtils
 import com.zpw.stockanalyze.mvvm.model.BaseRepository
 import com.zpw.stockanalyze.mvvm.utils.DateUtils
 
-class IndustryRepository(val netHelper: NetHelper): BaseRepository() {
+class IndustryRepository: BaseRepository() {
 
     suspend fun getValueData(): List<Industry> {
         return netHelper.getIndustry().getIndustry(

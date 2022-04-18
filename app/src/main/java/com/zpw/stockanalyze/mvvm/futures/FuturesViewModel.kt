@@ -1,11 +1,9 @@
 package com.zpw.stockanalyze.mvvm.futures
 
-import com.zpw.stockanalyze.mvvm.utils.AppExecutors
 import com.zpw.stockanalyze.mvvm.viewmodel.BaseViewModel
 
 class FuturesViewModel(
-    private val repo: FuturesRepository,
-    private val executors: AppExecutors
+    private val repo: FuturesRepository
 ) : BaseViewModel<FuturesRepository>(repo) {
     private val TAG: String = FuturesViewModel::class.java.simpleName
     val imFutureData = mutableListOf<Float>()

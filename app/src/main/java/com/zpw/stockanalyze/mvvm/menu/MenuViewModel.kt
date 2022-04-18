@@ -6,12 +6,10 @@ import com.zpw.stockanalyze.mvvm.anchor.AnchorActivity
 import com.zpw.stockanalyze.mvvm.futures.FuturesActivity
 import com.zpw.stockanalyze.mvvm.industry.IndustryActivity
 import com.zpw.stockanalyze.mvvm.search.SearchActivity
-import com.zpw.stockanalyze.mvvm.utils.AppExecutors
 import com.zpw.stockanalyze.mvvm.viewmodel.BaseViewModel
 
 class MenuViewModel(
-    private val repo: MenuRepository,
-    private val executors: AppExecutors
+    private val repo: MenuRepository
 ): BaseViewModel<MenuRepository>(repo) {
     private val TAG: String = MenuViewModel::class.java.simpleName
     val stockValue = mutableListOf<StockValue>()
